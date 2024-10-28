@@ -1,0 +1,174 @@
+<div class="pro_wrap">
+<div class="container">
+    <h1>My Profile</h1>
+  
+    <!-- Profile Picture Section -->
+    <div class="profile-pic">
+      <label for="profileUpload">
+        <img
+          [src]="profileImage || '/images/person.png'"
+          alt="Profile Picture"
+          id="profileImage"
+        />
+      </label>
+      <input
+        type="file"
+        id="profileUpload"
+        (change)="onFileSelected($event)"
+        accept="image/*"
+      />
+    </div>
+  
+    <!-- Form Section -->
+    <form class="profile_form">
+      <div>
+      <div class="form-group">
+        <label for="fullName">NAME</label>
+        <input type="text" id="fullName" name="fullName" />
+      </div>
+  
+      <div class="form-group">
+        <label for="address">ADDRESS</label>
+        <input type="text" id="address" name="address" />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">EMAIL ID</label>
+        <input type="email" id="email" name="email" />
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">PHONE NO.</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+  
+      <div class="form-group">
+        <label for="passingYear">INSTITUTION NAME</label>
+        <input type="number" id="passingYear" name="passingYear" min="1900" />
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">DATE OF BIRTH</label>
+        <input type="date" id="dob" name="dob" />
+      </div>
+      </div>
+      
+      <div>
+      <div class="form-group">
+        <label for="nationality">NATIONALITY</label>
+        <select id="nationality" name="nationality">
+          <option value="indian">Indian</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group" id="gender">
+        <label for="gender">GENDER</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+  
+      <div class="form-group">
+        <label for="course">COURSE</label>
+        <input type="text" id="course" name="course" />
+      </div>
+  
+      <!-- <div class="form-group">
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" name="marks" min="0" max="100" />
+      </div> -->
+  
+      <div class="form-group">
+        <label for="remark">REMARK</label>
+        <textarea id="remark" name="remark"></textarea>
+      </div>
+      
+      <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="achievements">
+    <h3>My Achievements</h3>
+    <div class="achieve_tasks">
+      <img class="achieve_img" src="/images/achievement.png" alt="">
+      <div class="achive_title">
+        <h5>Skill Sprint</h5>
+       <p> Complete 1 skill-based course in 8 days</p>
+      </div>
+      <p>0/8</p>
+    </div>
+    <div class="achieve_tasks">
+      <img class="achieve_img" src="/images/achievement.png" alt="">
+      <div class="achive_title">
+        <h5>career Booster</h5>
+      <p>Finish 1 career development modules in 6days </p>
+      </div>
+      <p>0/6</p>
+    </div>
+    <div class="achieve_tasks">
+      <img class="achieve_img" src="/images/achievement.png" alt="">
+      <div class="achive_title">
+        <h5>Module Master</h5>
+      <p>Complete Any 4 module in 20days</p>
+      </div>
+      <p>0/20</p>
+    </div>
+    <div class="achieve_tasks">
+      <img class="achieve_img" src="/images/achievement.png" alt="">
+      <div class="achive_title">
+        <h5>Exam Excellence</h5>
+       <p>Complete 3 Exam related Course</p>
+      </div>
+      <p>0/3</p>
+    </div>
+
+  </div>
+  </div>
+<footer class="unique-footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h2 class="footer-logo">E-Learning</h2>
+            <p>Learn at your pace, Anywhere, Anytime, Any place, Empowering minds, unlocking fate, Education refined</p>
+            <div class="social-icons">
+                <a href="#"><img src="/images/facebook.png" alt="" class="imf"></a>
+                <!-- <i class="fab fa-facebook-f"></i> -->
+                <a href="#"><img src="/images/insta.png" alt=""class="imi"></a>
+                <a href="#"><img src="/images/linkedin.png" alt="" class="iml"></a>
+                <a href="#"><img src="/images/youtube.png" alt="" class="imy"></a>
+            </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+            <h3>Explore</h3>
+            <ul>
+                <li><a href="#">Home</a>
+                <a href="#">Registration</a>
+                <a href="#">Courses</a></li>
+                <li><a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Admin</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-section contact-form">
+            <h3>Contact US</h3>
+            <p>+91 9876543210</p>
+            <p>elearn&#64;gmail.com</p>
+            <!-- <form action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <textarea placeholder="Your Message" rows="3"></textarea>
+                <button type="submit">Send Message</button>
+            </form> -->
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 E-Learning. All rights reserved.</p>
+    </div>
+</footer>

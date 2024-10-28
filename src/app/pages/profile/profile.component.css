@@ -1,0 +1,266 @@
+/* Container styling */
+.container {
+    max-width: 780px;
+    margin: 22px 91px ;
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: #f9f9f9;
+    box-shadow: 20px 30px 25px rgb(143, 132, 132); */
+    
+  }
+.pro_wrap{
+  display: flex;
+}
+#gender{
+  display: flex;
+}
+.profile_form{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 63px;
+} 
+  /* Heading styling */
+  h1 {
+    color: #21c070;
+    margin-bottom: 20px;
+  }
+  .achievements h3{
+    color: #21c070;
+    margin-bottom: 33px;
+    padding-top: 27px;
+  }
+  
+  /* Profile picture styling */
+  .profile-pic {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .profile-pic label {
+    cursor: pointer;
+  }
+  
+  .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  
+  .profile-pic input {
+    display: none;
+  }
+  
+  /* Form styling */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 30px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #0430e0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0ee2d1;
+  }
+
+  /* Footer General Styles */
+.unique-footer {
+    background: #18e4aa;
+    color: #fff;
+    padding: 23px 40px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.footer-container {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 30% 35% 15%;
+    gap: 114px;
+}
+
+/* .footer-section {
+    flex: 1 1 300px;
+    padding: 20px;
+} */
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.footer-section p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Quick Links Section */
+.footer-section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 49px;
+    transition: color 0.3s ease;
+}
+.footer-section.links{
+    padding-left: 60px;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Contact Form Section */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.imf{
+    width: 42px;
+}
+
+.imi{
+    width: 52px;
+}
+
+.iml{
+    width: 42px;
+}
+.imy{
+    width: 48px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FFC107;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    color: #fff;
+}
+.achieve_tasks{
+  display: flex;
+  gap: 8px;
+  border: solid 1px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+
+}
+.achieve_img{
+  width: 42px;
+  height: 42px;
+}
+
+.achievements{
+  padding-top: 30px;
+}
+.achive_title{
+
+      width: 314px;
+    padding-left: 14px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}

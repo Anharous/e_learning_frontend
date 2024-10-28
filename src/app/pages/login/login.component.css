@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://www.signupgenius.com/cms/socialMediaImages/study-tips-college-students-facebook-1200x630.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-content {
+    text-align: center;
+    /* padding: 40px; */
+}
+
+.join {
+    color: rgb(42 181 142);
+}
+
+.logo {
+    background: url(/images/person.png) no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+    background-color: rgb(42 181 142);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgb(143, 132, 132);
+    width: 400px;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+}
+
+.login-image {
+    display: block;
+    margin: 20px auto;
+    max-height: 100px;
+    width: auto;
+}
+
+.logoName {
+    color: rgb(0, 0, 0);
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 10px;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+input {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 5px 7px 8px rgb(143, 132, 132);
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background-color: #0D805A;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 7px 8px rgb(143, 132, 132);
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+.benefit {
+    flex: 1 1 30%; 
+    margin: 10px;
+    padding: 20px;
+    background: white; 
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(6, 2, 222, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit i {
+    font-size: 2em;
+    color: rgb(42 181 142); 
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgb(42 181 142);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgb(143, 132, 132);
+    width: 400px;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+}
+
+.forgot-password h2 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.forgot-password p {
+    color: #080707;
+    margin: 10px 0;
+}
+
+.forgot-password input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #0D805A;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(143, 132, 132, 0.3);
+    outline: none;
+}
+
+.forgot-password input:focus {
+    border-color: #0D805A;
+    box-shadow: 0 0 5px rgba(161, 225, 203, 0.5);
+}
+
+.forgot-password button {
+    background-color: #0D805A;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(143, 132, 132, 0.5);
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.forgot-password button:hover {
+    background-color: #00b374;
+}
+
+.unique-footer {
+    background: #18e4aa;
+    color: #fff;
+    padding: 23px 40px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.footer-container {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 30% 35% 15%;
+    gap: 114px;
+}
+
+/* .footer-section {
+    flex: 1 1 300px;
+    padding: 20px;
+} */
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.footer-section p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Quick Links Section */
+.footer-section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 49px;
+    transition: color 0.3s ease;
+}
+.footer-section.links{
+    padding-left: 60px;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Contact Form Section */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.imf{
+    width: 42px;
+}
+
+.imi{
+    width: 52px;
+}
+
+.iml{
+    width: 42px;
+}
+.imy{
+    width: 48px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FFC107;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    color: #fff;
+}
+.welcome{
+    padding: 0px;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
