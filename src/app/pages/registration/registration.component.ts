@@ -1,87 +1,70 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RegistrationService } from '../../service/registration.service';
 
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
   
 })
-export class RegistrationComponent implements AfterViewInit {
-  private currentSlide: number = 0;
-  private slides!: NodeListOf<HTMLElement>; // Use definite assignment assertion
-  private totalSlides: number = 0; // Initialize to zero
+export class RegistrationComponent {
+  registrationForm: FormGroup;
+  roles = ['Admin', 'User']; // Define available roles
+  registrationSuccess: boolean = false;
+  registrationError: string | null = null;
+  successMessage: string | null = null; // Add a success message variable
+  errorMessage: string | null = null;   // Add an error message variable
 
-  ngAfterViewInit() {
-    this.slides = document.querySelectorAll<HTMLElement>('.slide');
-    this.totalSlides = this.slides.length;
-    this.scrollAnimation();
-    this.startImageSlider(); // Start the image slider
-  }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
-    this.scrollAnimation();
-  }
-
-  private scrollAnimation(): void {
-    const boxes = document.querySelectorAll('.info__box') as NodeListOf<HTMLElement>;
-    const triggerPoint = window.innerHeight / 1.3;
-
-    boxes.forEach(box => {
-      const boxTop = box.getBoundingClientRect().top;
-
-      if (boxTop < triggerPoint) {
-        box.classList.add('show');
-      } else {
-        box.classList.remove('show');
-      }
+  constructor(
+    private fb: FormBuilder,
+    private registrationService: RegistrationService,
+    private router: Router
+  ) {
+    this.registrationForm = this.fb.group({
+      fullname: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      address: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      date: ['', Validators.required],
+      role: ['', Validators.required] // Dropdown for selecting role
     });
   }
 
-  private startImageSlider(): void {
-    this.showSlide(this.currentSlide);
-    setInterval(() => {
-      this.nextSlide();
-    }, 5000);
-  }
+  async onSubmit(): Promise<void> {
+    if (this.registrationForm.valid) {
+      const formData = this.registrationForm.value;
 
-  private showSlide(index: number): void {
-    const slidesContainer = document.querySelector<HTMLElement>('.slides');
-    if (slidesContainer) {
-      slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+      try {
+        // Call the registration service to send data to backend
+        const response = await this.registrationService.register(formData);
+
+        this.successMessage = 'Successfully Registered!'; // Success message
+        this.errorMessage = null;  // Clear any previous error message
+        this.registrationSuccess = true;
+
+        // Navigate to the appropriate dashboard based on role
+        if (formData.role === 'Admin') {
+          this.router.navigate(['/admin-dashboard']);
+        } else {
+          this.router.navigate(['/user-dashboard']);
+        }
+      } catch (error) {
+        // On error, show error message
+        this.registrationSuccess = false;
+        this.successMessage = null; // Clear success message
+        this.errorMessage = 'Registration Unsuccessful. Please check your inputs.'; // Error message
+        console.error('Registration Error:', error);
+      }
+    } else {
+      // If the form is invalid, show an error for invalid fields
+      this.successMessage = null; // Clear any success message
+      this.errorMessage = 'Please fill in all required fields correctly.';
     }
-  }
-
-  public nextSlide(): void { // Changed to public
-    this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-    this.showSlide(this.currentSlide);
-  }
-
-  public prevSlide(): void { // Changed to public
-    this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-    this.showSlide(this.currentSlide);
-  }
-
-  onMouseEnter(event: MouseEvent): void {
-    const target = event.currentTarget as HTMLElement;
-    target.classList.add('hovered');
-  }
-
-  onMouseLeave(event: MouseEvent): void {
-    const target = event.currentTarget as HTMLElement;
-    target.classList.remove('hovered');
-  }
-
-  // Add public methods for arrow clicks
-  public handleNext(): void {
-    this.nextSlide();
-  }
-
-  public handlePrev(): void {
-    this.prevSlide();
   }
 }

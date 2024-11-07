@@ -152,12 +152,13 @@ form {
     padding-right: 88px;
 }
 
-form input {
+form input ,form label {
         margin: 10px 0;
     padding: 10px;
     width: 481px;
     border: 1px solid #84fdb8;
     border-radius: 4px;
+        /* text-align: left; */
 }
 
 form input[type="submit"] {
@@ -167,7 +168,12 @@ form input[type="submit"] {
     border-radius: 28px;
     cursor: pointer;
 }
-
+#role{
+    margin-left: 235px;
+    border-radius: 9px;
+    padding: 2px 13px;
+    border: solid 2px #84fdb8;
+}
 form input[type="submit"]:hover {
     background-color: #444;
 }

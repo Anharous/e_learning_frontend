@@ -5,11 +5,11 @@
         <div class="logoName">Log-in</div>
         <div class="inputs">
             <label>Email</label>
-            <input type="text" placeholder="Enter your email">
+            <input type="text" [(ngModel)]="email"placeholder="Enter your email" required>
             <label>Password</label>
-            <input type="password" placeholder="Maximum 6 char">
+            <input type="password" [(ngModel)]="password" placeholder="Maximum 6 char" required>
             <label class="forgot-password-label"><input class="check" type="checkbox" [(ngModel)]="showForgotPassword"  />Forgot Password?</label>
-            <button>Log In</button>
+            <button (click)="onLogin()">Log In</button>
         </div>
     </div>
 </div>
@@ -17,7 +17,7 @@
     <h2>Forgot Your Password?</h2>
     <p>Please enter your registered email below, and we’ll send you password reset instructions.</p>
     <input type="email" placeholder="Enter your registered email" />
-    <button>Submit</button>
+    <button (click)="submitForgotPassword()">Submit</button>
 </div>
 
 <footer class="unique-footer">
