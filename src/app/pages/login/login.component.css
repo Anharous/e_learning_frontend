@@ -295,7 +295,16 @@ button {
     padding: 0px;
 }
 
+.forgot-password-label {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: baseline;
+}
 
+.check{
+   box-shadow: unset;
+   margin-right: 5px; 
+}
 
 @media (max-width: 768px) {
     .footer-container {
