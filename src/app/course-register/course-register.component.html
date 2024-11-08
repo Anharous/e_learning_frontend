@@ -1,0 +1,43 @@
+<!-- <div class="register-container">
+  <h2>Register for {{ courseTitle }}</h2>
+  
+
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+  
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name" [(ngModel)]="formData.name" name="name" required />
+    </div>
+    <div>
+      <label for="email">Your Email</label>
+      <input id="email" type="email" placeholder="Enter your email" [(ngModel)]="formData.email" name="email" required />
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div> -->
+
+<div class="register-container">
+  <h2>Register for {{ courseTitle }}</h2>
+  <form>
+    <!-- Add form fields for registration -->
+    <div>
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name" required />
+    </div>
+    <div>
+      <label for="email">Your Email</label>
+      <input id="email" type="email" placeholder="Enter your email" required />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

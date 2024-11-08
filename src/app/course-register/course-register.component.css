@@ -1,0 +1,91 @@
+/* General container */
+.register-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Heading */
+.register-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #28a745; /* Green theme */
+  font-weight: 600;
+}
+
+/* Form elements */
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.register-container input[type="text"],.register-container input[type="email"] {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.register-container input[type="text"]:focus,.register-container input[type="email"]:focus {
+  border-color: #28a745; /* Green focus border */
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Green glow effect */
+}
+
+/* Submit button */
+.register-container button {
+  padding: 8px 20px;
+  font-size: 18px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight hover effect */
+}
+
+button:active {
+  background-color: #1e7e34; /* Even darker green on click */
+  transform: translateY(0); /* Reset hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .register-container h2 {
+    font-size: 20px;
+  }
+
+  input[type="text"], input[type="email"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

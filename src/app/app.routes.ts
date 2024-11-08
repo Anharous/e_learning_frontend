@@ -5,6 +5,7 @@ import { CourseDetailsComponent } from './pages/course-details/course-details.co
 import { MyCoursesComponent } from './pages/my-courses/my-courses.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CourseRegisterComponent } from './course-register/course-register.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,9 @@ export const routes: Routes = [
     {
         path: 'my-courses',
         component: MyCoursesComponent
+    },
+    { path: 'register/:courseTitle',
+      component: CourseRegisterComponent 
     },
     {
         path: '**',
