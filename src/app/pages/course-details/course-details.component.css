@@ -37,7 +37,7 @@
   /* Heading styles */
   .course-heading, .courses-offered h4 {
     font-size: 1.8rem;
-    color: #2980b9;
+    color: #198741;
     margin-bottom: 10px;
   }
   
@@ -51,13 +51,13 @@
   .course-list li, .courses-offered li, .archive-section li {
     padding: 5px 0;
     font-size: 1.1rem;
-    color: #34495e;
+    color: #345e43;
   }
   
   /* Description paragraphs */
   .course-description, .offered-description, .archive-description {
     margin-top: 20px;
-    color: #7f8c8d;
+    color: #7f8d86;
     font-size: 1rem;
     line-height: 1.6;
   }
@@ -72,13 +72,13 @@
   
   .archive-section h4 {
     font-size: 1.5rem;
-    color: #2980b9;
+    color: #29b990;
     margin-bottom: 10px;
   }
   
   .archive-section ul li {
     font-size: 1rem;
-    color: #2c3e50;
+    color: #2c5037;
   }
   
   /* Adjustments for responsive design */
@@ -92,7 +92,7 @@
   h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #2980b9;
+    color: #29b978;
   }
   
   ul {
@@ -102,7 +102,7 @@
   
   ul li {
     margin: 10px 0;
-    color: #34495e;
+    color: #345e48;
   }
   
   /* Scroll Effect */
@@ -140,7 +140,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 40px;
-    color: #2c3e50;
+    color: #2c5045;
   }
   
   /* Courses Container */
@@ -173,7 +173,7 @@
   .course-image {
     width: 100%;
     height: auto;
-    border-bottom: 4px solid #2980b9;
+    border-bottom: 4px solid #29b960;
     transition: all 0.3s ease;
   }
   
@@ -187,7 +187,7 @@
   .course-title {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #2c503f;
     margin-bottom: 10px;
     text-transform: uppercase;
     transition: color 0.3s ease;
@@ -202,11 +202,11 @@
   
   /* Hover effects for text */
   .course-card:hover .course-title {
-    color: #2980b9;
+    color: #29b990;
   }
   
   .course-card:hover .course-description {
-    color: #34495e;
+    color: #345e4a;
   }
   
   /* Responsive design */
